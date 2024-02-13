@@ -1,0 +1,11 @@
+
+<h1> My Tasks</h1>
+<% @tasks.each do |task|%>
+<% if task.completed%>
+<i class="fa-regular fa-square-check"></i>
+ <%=link_to task.title, task_path(task)  %><br>
+ <% else %>
+ <i class="fa-regular fa-square"></i>
+ <%=link_to task.title, task_path(task) %><br>
+<% end %>
+<% end %>
